@@ -37,8 +37,9 @@ legend('RCA: Overclocking','RCA: Truncation','CSA 2-stage','CSA 3-stage','Locati
 xlabel('Frequency (MHz)');
 ylabel('log(Error Expectation)');
 %draw double arrows
-ah1=annotation('doublearrow',[.2 .78],[.9 .9]);
-ah1_2=annotation('doublearrow',[.78 .88],[.7 .7]);
+ah1_1=annotation('doublearrow',[.2 .35],[.9 .9]);
+ah1_2=annotation('doublearrow',[.35 .78],[.9 .9]);
+ah1_3=annotation('doublearrow',[.78 .88],[.7 .7]);
 %tb=annotation('textbox',)
 
 figure(2)       % LUT=35
@@ -87,7 +88,8 @@ legend('RCA: Overclocking','RCA: Truncation','CSA 2-stage','Location','SouthEast
 xlabel('Frequency (MHz)');
 ylabel('log(Error Expectation)');
 %draw double arrows
-ah4_1=annotation('doublearrow',[.2 .88],[.84 .84]);
+ah4_1=annotation('doublearrow',[.2 .35],[.84 .84]);
+ah4_2=annotation('doublearrow',[.35 .88],[.84 .84]);
 
 
 
