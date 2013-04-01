@@ -73,9 +73,13 @@ for i=wid_TF:-1:4   %area
         Ele=find(temp==min(temp));
         %TF(j,i)=min(Ele);
         if find(Ele==1)>0
-            TF(j,i)=1;
+            if find(Ele==2)>0   % exits RCA_Trad
+                TF(j,i)=5;
+            else
+                TF(j,i)=1;      % exits RCA_New only
+            end
         else
-            TF(j,i)=max(Ele);
+            TF(j,i)=min(Ele);
         end                             
     end
 end
@@ -85,7 +89,7 @@ TFM=TF(1:36,:);
 TFM(a,b)=1;
 TFM(35:36,4:44)=1;
 TFM=[TFM TFM(:,44)];    %add extra column, area=45
-TFM(1:2,4:44)=5;           %set error-free region
+%TFM(1:2,4:44)=5;           %set error-free region
 %Freq=(2.26:-0.02:1.56);
 Freq=1000./(2.26:-0.02:1.56);
 Area=(1:45);
